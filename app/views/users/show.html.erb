@@ -9,11 +9,14 @@ List all of the this users dogs in the table!
   </tr>
 
   <tbody>
+    <% @user.dogs.each do |dog| %>
         <tr>
-        <td> dog name </td>
-        <td> dog breed </td>
-        <td> dog age </td>
+        <td> <%= dog.name %> </td>
+        <td> <%= dog.breed %>  </td>
+        <td> <%= dog.age %>  </td>
       </tr>
-
+    <% end %>
       </tbody>
 </table>
+
+<%= link_to 'Back', users_path %>
